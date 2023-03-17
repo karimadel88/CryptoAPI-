@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 15px;
+  z-index: 3;
+  position: relative;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-image: url("./header.png");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 6rem;
+  font-weight: bold;
+  color: wheat;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
+  z-index: 1; /* ensure the overlay appears on top of other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay h2 {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.overlay p {
+  font-size: 1.2rem;
+  color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,45 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CryptoAPI",
+    "version": "1.0.0.0",
+    "description": "The CryptoAPI project will be a cryptography API that takes the name of the cryptosystem, the key, and plaintext or ciphertext as input, and returns the corresponding ciphertext or plaintext as output. The API will support multiple encryption and decryption algorithms, including symmetric and asymmetric encryption, and hashing algorithms."
+  },
+  "schemes": ["http", "https"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/v1/api/aes/encrypt": {
+      "post": {
+        "summary": "Encrypt ciphertext with AES algorithm",
+        "operationId": "UpdateFeature",
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/featureUpdateFeatureResponse"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "uuid",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "format": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/protobufStruct"
+            }
+          }
+        ],
+        "tags": ["Generic"]
+      }
+    }
+  }
+}

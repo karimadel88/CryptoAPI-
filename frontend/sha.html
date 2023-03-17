@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SHA algorithm</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        background: url("cryptography.jpg") no-repeat center center fixed;
+        background-size: cover;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+      }
+      .box {
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 20px;
+        margin: 10px;
+        width: 80%;
+        max-width: 500px;
+        box-shadow: 2px 2px 5px #888;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: white;
+        margin-bottom: 20px;
+      }
+      input {
+        margin: 10px 0;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+        color: #333;
+        outline: none;
+      }
+      button {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        margin: 10px 0;
+        transition: background-color 0.2s ease;
+      }
+      button:hover {
+        background-color: #555;
+      }
+      #encrypt-btn {
+        background-color: #009688;
+      }
+      #decrypt-btn {
+        background-color: #f44336;
+      }
+      #reset-btn {
+        background-color: #ccc;
+        color: #333;
+      }
+    </style>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="./aes.html">AES</a></li>
+          <li><a href="./rsa.html">RSA</a></li>
+          <li><a href="./sha.html">SHA</a></li>
+          <li><a href="./index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <h1>SHA Algorithm</h1>
+      <div class="box">
+        <label for="plaintext">Text</label>
+        <input type="text" id="plaintext" />
+
+        <label for="ciphertext">Hashed Text</label>
+        <input type="text" id="ciphertext" />
+
+        <button id="encrypt-btn" onclick="hasshedFun()">Hash Text</button>
+        <button id="decrypt-btn" onclick="compareFun()">
+          Is Hashed text is same text
+        </button>
+        <button id="reset-btn" onclick="reset()">Reset</button>
+      </div>
+    </div>
+
+    <script src="./js/sha.js"></script>
+  </body>
+</html>
